@@ -42,3 +42,6 @@ fastlane/test_output
 *.swp
 *~
 .env
+node_modules
+.next
+.vercel
