@@ -17,6 +17,11 @@
 		C3B0193A8FDD42F6AA8C37A6 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76748C684D142D0AC28AED9 /* PersistenceController.swift */; };
 		949B0BBBC3CA415A905B6B17 /* KeepTrack.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 143AAE9D4B084E5DA387CBE8 /* KeepTrack.xcdatamodeld */; };
 		8A7B3B96B0F24E459815AB1A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B886CF5063784E139F82900E /* Assets.xcassets */; };
+		AA9161610F454DAD9E326111 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3E438C876D419EAD477111 /* CameraView.swift */; };
+		BB9161610F454DAD9E326222 /* CaptureSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3E438C876D419EAD477222 /* CaptureSheet.swift */; };
+		CC9161610F454DAD9E326333 /* OCRService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3E438C876D419EAD477333 /* OCRService.swift */; };
+		DD9161610F454DAD9E326444 /* StoreMatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3E438C876D419EAD477444 /* StoreMatcher.swift */; };
+		EE9161610F454DAD9E326555 /* stores.json in Resources */ = {isa = PBXBuildFile; fileRef = EE3E438C876D419EAD477555 /* stores.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +36,11 @@
 		A76748C684D142D0AC28AED9 /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
 		CF1AC0C7C30841D1A7E5F903 /* KeepTrack.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = KeepTrack.xcdatamodel; sourceTree = "<group>"; };
 		B886CF5063784E139F82900E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AA3E438C876D419EAD477111 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
+		BB3E438C876D419EAD477222 /* CaptureSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureSheet.swift; sourceTree = "<group>"; };
+		CC3E438C876D419EAD477333 /* OCRService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCRService.swift; sourceTree = "<group>"; };
+		DD3E438C876D419EAD477444 /* StoreMatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreMatcher.swift; sourceTree = "<group>"; };
+		EE3E438C876D419EAD477555 /* stores.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = stores.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +78,7 @@
 				E8E9A81286F74000A4897E6F /* Models */,
 				B035270D1620429D946C3035 /* Services */,
 				72EDA47353BC43AA8AF69AA6 /* Views */,
+				FF9161610F454DAD9E326666 /* Resources */,
 				0EC0506107C745378DFB3187 /* Preview Content */,
 			);
 			path = KeepTrack;
@@ -85,8 +96,18 @@
 			isa = PBXGroup;
 			children = (
 				A76748C684D142D0AC28AED9 /* PersistenceController.swift */,
+				CC3E438C876D419EAD477333 /* OCRService.swift */,
+				DD3E438C876D419EAD477444 /* StoreMatcher.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		FF9161610F454DAD9E326666 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				EE3E438C876D419EAD477555 /* stores.json */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		72EDA47353BC43AA8AF69AA6 /* Views */ = {
@@ -97,8 +118,18 @@
 				26BC293A401845FCB7687D79 /* Archive */,
 				5DD357D04D3148F586A91D86 /* Settings */,
 				46DE3FA5B0404B74A578748F /* Components */,
+				FF3E438C876D419EAD477666 /* Capture */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		FF3E438C876D419EAD477666 /* Capture */ = {
+			isa = PBXGroup;
+			children = (
+				AA3E438C876D419EAD477111 /* CameraView.swift */,
+				BB3E438C876D419EAD477222 /* CaptureSheet.swift */,
+			);
+			path = Capture;
 			sourceTree = "<group>";
 		};
 		1496200F161D420C8EF06248 /* Home */ = {
@@ -200,6 +231,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A7B3B96B0F24E459815AB1A /* Assets.xcassets in Resources */,
+				EE9161610F454DAD9E326555 /* stores.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,6 +251,10 @@
 				078C4BF4A3104552AD753EF1 /* PreviewData.swift in Sources */,
 				C3B0193A8FDD42F6AA8C37A6 /* PersistenceController.swift in Sources */,
 				949B0BBBC3CA415A905B6B17 /* KeepTrack.xcdatamodeld in Sources */,
+				AA9161610F454DAD9E326111 /* CameraView.swift in Sources */,
+				BB9161610F454DAD9E326222 /* CaptureSheet.swift in Sources */,
+				CC9161610F454DAD9E326333 /* OCRService.swift in Sources */,
+				DD9161610F454DAD9E326444 /* StoreMatcher.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,6 +387,8 @@
 				DEVELOPMENT_ASSET_PATHS = "\"KeepTrack/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "KeepTrack uses your camera to scan receipts and extract purchase details.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "KeepTrack accesses your photo library so you can import existing receipt photos.";
 				INFOPLIST_KEY_NSSupportsLiveActivities = NO;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

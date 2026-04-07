@@ -11,6 +11,8 @@ struct HomeView: View {
     )
     private var items: FetchedResults<Item>
 
+    @State private var showCapture = false
+
     var body: some View {
         NavigationStack {
             Group {
@@ -20,7 +22,6 @@ struct HomeView: View {
                     List {
                         ForEach(items) { item in
                             NavigationLink {
-                                // Item detail — S5
                                 Text(item.name ?? "Item")
                             } label: {
                                 ItemRow(item: item)
@@ -34,12 +35,18 @@ struct HomeView: View {
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
                     Button {
-                        // Capture flow — S5
+                        showCapture = true
                     } label: {
                         Image(systemName: "plus")
                             .fontWeight(.semibold)
                     }
                 }
+            }
+            .sheet(isPresented: $showCapture) {
+                CaptureSheet {
+                    showCapture = false
+                }
+                .environment(\.managedObjectContext, PersistenceController.shared.container.viewContext)
             }
         }
     }
