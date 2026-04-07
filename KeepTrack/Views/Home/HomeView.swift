@@ -1,5 +1,7 @@
 import SwiftUI
 
+private let freeItemLimit = 10
+
 struct HomeView: View {
     @Environment(\.managedObjectContext) private var context
 
@@ -13,6 +15,7 @@ struct HomeView: View {
     )
     private var items: FetchedResults<Item>
 
+    @StateObject private var store = StoreManager.shared
     @State private var showCapture = false
 
     var body: some View {
@@ -44,6 +47,18 @@ struct HomeView: View {
             }
             .navigationTitle("KeepTrack")
             .toolbar {
+                ToolbarItem(placement: .topBarLeading) {
+                    if store.isPro {
+                        Label("Pro", systemImage: "star.fill")
+                            .foregroundStyle(.yellow)
+                            .fontWeight(.semibold)
+                            .font(.subheadline)
+                    } else {
+                        Text("\(items.count)/\(freeItemLimit) items")
+                            .font(.subheadline)
+                            .foregroundStyle(items.count >= freeItemLimit ? .red : .secondary)
+                    }
+                }
                 ToolbarItem(placement: .topBarTrailing) {
                     Button {
                         showCapture = true
@@ -51,9 +66,6 @@ struct HomeView: View {
                         Image(systemName: "plus")
                             .fontWeight(.semibold)
                     }
-                }
-                ToolbarItem(placement: .topBarLeading) {
-                    EditButton()
                 }
             }
             .sheet(isPresented: $showCapture) {

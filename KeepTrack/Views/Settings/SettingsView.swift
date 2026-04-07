@@ -1,3 +1,4 @@
+import StoreKit
 import SwiftUI
 
 struct SettingsView: View {
@@ -6,6 +7,8 @@ struct SettingsView: View {
     @AppStorage("remind3Days") private var remind3Days = true
     @AppStorage("remind1Day") private var remind1Day = true
     @AppStorage("badgeCountEnabled") private var badgeCountEnabled = true
+
+    @StateObject private var store = StoreManager.shared
 
     var body: some View {
         NavigationStack {
@@ -33,15 +36,51 @@ struct SettingsView: View {
                     HStack {
                         Text("Current Plan")
                         Spacer()
-                        Text("Free")
-                            .foregroundStyle(.secondary)
+                        if store.isPro {
+                            Label("Pro", systemImage: "star.fill")
+                                .foregroundStyle(.yellow)
+                                .fontWeight(.semibold)
+                        } else {
+                            Text("Free")
+                                .foregroundStyle(.secondary)
+                        }
                     }
-                    Button("Upgrade to Pro — $2.99/mo") {
-                        // StoreKit flow — S6
+
+                    if !store.isPro {
+                        Button {
+                            Task { await store.purchase() }
+                        } label: {
+                            HStack {
+                                if store.purchaseState == .purchasing {
+                                    ProgressView()
+                                        .controlSize(.small)
+                                        .padding(.trailing, 4)
+                                }
+                                Text(store.proProduct.map { "Upgrade to Pro — \($0.displayPrice)" }
+                                     ?? "Upgrade to Pro — $2.99")
+                            }
+                        }
+                        .disabled(store.purchaseState == .purchasing || store.purchaseState == .restoring)
+
+                        Button {
+                            Task { await store.restorePurchases() }
+                        } label: {
+                            HStack {
+                                if store.purchaseState == .restoring {
+                                    ProgressView()
+                                        .controlSize(.small)
+                                        .padding(.trailing, 4)
+                                }
+                                Text("Restore Purchases")
+                            }
+                        }
+                        .disabled(store.purchaseState == .purchasing || store.purchaseState == .restoring)
                     }
-                    .foregroundStyle(.blue)
-                    Button("Restore Purchases") {
-                        // StoreKit restore — S6
+
+                    if store.purchaseState == .pending {
+                        Label("Awaiting approval (Ask to Buy)", systemImage: "clock")
+                            .foregroundStyle(.orange)
+                            .font(.footnote)
                     }
                 }
 
@@ -65,15 +104,34 @@ struct SettingsView: View {
                     }
                     Link("Privacy Policy", destination: URL(string: "https://bigclaw.ai/privacy")!)
                     Button("Rate KeepTrack") {
-                        // StoreKit review request — S6
+                        if let scene = UIApplication.shared.connectedScenes.first(where: { $0.activationState == .foregroundActive }) as? UIWindowScene {
+                            SKStoreReviewController.requestReview(in: scene)
+                        }
                     }
                 }
             }
             .navigationTitle("Settings")
+            .alert("Purchase Error", isPresented: Binding(
+                get: { store.purchaseError != nil },
+                set: { if !$0 { store.purchaseError = nil } }
+            )) {
+                Button("OK") { store.purchaseError = nil }
+            } message: {
+                Text(store.purchaseError?.errorDescription ?? "")
+            }
         }
     }
 }
 
-#Preview {
+// MARK: - Preview
+
+#Preview("Free user") {
     SettingsView()
+}
+
+#Preview("Pro user") {
+    let view = SettingsView()
+    // Simulate Pro state via UserDefaults for preview
+    UserDefaults.standard.set(true, forKey: "keeptrack_isPro_cached")
+    return view
 }

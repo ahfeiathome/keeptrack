@@ -23,9 +23,19 @@ private struct ItemForm {
 }
 
 // MARK: - Main sheet
+private let freeItemLimit = 10
+
 struct CaptureSheet: View {
     @Environment(\.managedObjectContext) private var context
     @Environment(\.dismiss) private var dismiss
+
+    @FetchRequest(
+        sortDescriptors: [],
+        predicate: NSPredicate(format: "isReturned == NO")
+    )
+    private var activeItems: FetchedResults<Item>
+
+    @StateObject private var store = StoreManager.shared
 
     var onSave: (() -> Void)?
 
@@ -34,6 +44,7 @@ struct CaptureSheet: View {
     @State private var form = ItemForm()
     @State private var photosItem: PhotosPickerItem?
     @State private var errorMessage: String?
+    @State private var showUpgradePrompt = false
 
     var body: some View {
         NavigationStack {
@@ -55,6 +66,9 @@ struct CaptureSheet: View {
                 ToolbarItem(placement: .topBarLeading) {
                     Button("Cancel") { dismiss() }
                 }
+            }
+            .sheet(isPresented: $showUpgradePrompt) {
+                ProUpgradePrompt()
             }
         }
     }
@@ -244,6 +258,12 @@ struct CaptureSheet: View {
     private func saveItem() {
         guard !form.name.isEmpty else {
             errorMessage = "Item name is required."
+            return
+        }
+
+        // Enforce 10-item limit for Free users
+        if !store.isPro && activeItems.count >= freeItemLimit {
+            showUpgradePrompt = true
             return
         }
 

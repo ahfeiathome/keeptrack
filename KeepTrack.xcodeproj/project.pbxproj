@@ -25,6 +25,9 @@
 		FF9161610F454DAD9E326777 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E438C876D419EAD477777 /* NotificationService.swift */; };
 		FF9161610F454DAD9E326888 /* ReminderScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E438C876D419EAD477888 /* ReminderScheduler.swift */; };
 		FF9161610F454DAD9E326999 /* NotificationPermissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E438C876D419EAD477999 /* NotificationPermissionView.swift */; };
+		AA9161610F454DAD9E326AAA /* StoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1E438C876D419EAD477AAA /* StoreManager.swift */; };
+		BB9161610F454DAD9E326BBB /* ProGate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1E438C876D419EAD477BBB /* ProGate.swift */; };
+		CC9161610F454DAD9E326CCC /* Products.storekit in Resources */ = {isa = PBXBuildFile; fileRef = CC1E438C876D419EAD477CCC /* Products.storekit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +50,9 @@
 		FF1E438C876D419EAD477777 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		FF1E438C876D419EAD477888 /* ReminderScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderScheduler.swift; sourceTree = "<group>"; };
 		FF1E438C876D419EAD477999 /* NotificationPermissionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationPermissionView.swift; sourceTree = "<group>"; };
+		AA1E438C876D419EAD477AAA /* StoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreManager.swift; sourceTree = "<group>"; };
+		BB1E438C876D419EAD477BBB /* ProGate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProGate.swift; sourceTree = "<group>"; };
+		CC1E438C876D419EAD477CCC /* Products.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = Products.storekit; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +112,7 @@
 				DD3E438C876D419EAD477444 /* StoreMatcher.swift */,
 				FF1E438C876D419EAD477777 /* NotificationService.swift */,
 				FF1E438C876D419EAD477888 /* ReminderScheduler.swift */,
+				AA1E438C876D419EAD477AAA /* StoreManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -114,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				EE3E438C876D419EAD477555 /* stores.json */,
+				CC1E438C876D419EAD477CCC /* Products.storekit */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -169,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				E3CDE9DEAEA941D49F9A85F1 /* ItemRow.swift */,
+				BB1E438C876D419EAD477BBB /* ProGate.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -241,6 +250,7 @@
 			files = (
 				8A7B3B96B0F24E459815AB1A /* Assets.xcassets in Resources */,
 				EE9161610F454DAD9E326555 /* stores.json in Resources */,
+				CC9161610F454DAD9E326CCC /* Products.storekit in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,6 +277,8 @@
 				FF9161610F454DAD9E326777 /* NotificationService.swift in Sources */,
 				FF9161610F454DAD9E326888 /* ReminderScheduler.swift in Sources */,
 				FF9161610F454DAD9E326999 /* NotificationPermissionView.swift in Sources */,
+				AA9161610F454DAD9E326AAA /* StoreManager.swift in Sources */,
+				BB9161610F454DAD9E326BBB /* ProGate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

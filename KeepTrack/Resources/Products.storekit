@@ -1,0 +1,28 @@
+{
+  "identifier" : "com.bigclaw.keeptrack",
+  "nonConsumableProducts" : [
+    {
+      "displayPrice" : "2.99",
+      "familyShareable" : false,
+      "internalID" : "com.bigclaw.keeptrack.pro",
+      "localizations" : [
+        {
+          "description" : "Unlock unlimited items, custom reminder intervals, and export features",
+          "displayName" : "KeepTrack Pro",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "com.bigclaw.keeptrack.pro",
+      "referenceName" : "KeepTrack Pro",
+      "type" : "NonConsumable"
+    }
+  ],
+  "consumableProducts" : [],
+  "autoRenewableSubscriptions" : [],
+  "nonRenewingSubscriptions" : [],
+  "version" : {
+    "major" : 3,
+    "minor" : 0,
+    "patch" : 0
+  }
+}
