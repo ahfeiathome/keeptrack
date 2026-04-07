@@ -273,6 +273,11 @@ struct CaptureSheet: View {
 
         do {
             try context.save()
+            // Schedule return-deadline reminders; request permission first if needed
+            Task { @MainActor in
+                await NotificationService.shared.requestPermission()
+                ReminderScheduler.scheduleReminders(for: item)
+            }
             onSave?()
             dismiss()
         } catch {

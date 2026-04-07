@@ -22,6 +22,9 @@
 		CC9161610F454DAD9E326333 /* OCRService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3E438C876D419EAD477333 /* OCRService.swift */; };
 		DD9161610F454DAD9E326444 /* StoreMatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3E438C876D419EAD477444 /* StoreMatcher.swift */; };
 		EE9161610F454DAD9E326555 /* stores.json in Resources */ = {isa = PBXBuildFile; fileRef = EE3E438C876D419EAD477555 /* stores.json */; };
+		FF9161610F454DAD9E326777 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E438C876D419EAD477777 /* NotificationService.swift */; };
+		FF9161610F454DAD9E326888 /* ReminderScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E438C876D419EAD477888 /* ReminderScheduler.swift */; };
+		FF9161610F454DAD9E326999 /* NotificationPermissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E438C876D419EAD477999 /* NotificationPermissionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +44,9 @@
 		CC3E438C876D419EAD477333 /* OCRService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCRService.swift; sourceTree = "<group>"; };
 		DD3E438C876D419EAD477444 /* StoreMatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreMatcher.swift; sourceTree = "<group>"; };
 		EE3E438C876D419EAD477555 /* stores.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = stores.json; sourceTree = "<group>"; };
+		FF1E438C876D419EAD477777 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		FF1E438C876D419EAD477888 /* ReminderScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderScheduler.swift; sourceTree = "<group>"; };
+		FF1E438C876D419EAD477999 /* NotificationPermissionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationPermissionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +104,8 @@
 				A76748C684D142D0AC28AED9 /* PersistenceController.swift */,
 				CC3E438C876D419EAD477333 /* OCRService.swift */,
 				DD3E438C876D419EAD477444 /* StoreMatcher.swift */,
+				FF1E438C876D419EAD477777 /* NotificationService.swift */,
+				FF1E438C876D419EAD477888 /* ReminderScheduler.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -152,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				647BA54864A94886B6F72AE9 /* SettingsView.swift */,
+				FF1E438C876D419EAD477999 /* NotificationPermissionView.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -255,6 +264,9 @@
 				BB9161610F454DAD9E326222 /* CaptureSheet.swift in Sources */,
 				CC9161610F454DAD9E326333 /* OCRService.swift in Sources */,
 				DD9161610F454DAD9E326444 /* StoreMatcher.swift in Sources */,
+				FF9161610F454DAD9E326777 /* NotificationService.swift in Sources */,
+				FF9161610F454DAD9E326888 /* ReminderScheduler.swift in Sources */,
+				FF9161610F454DAD9E326999 /* NotificationPermissionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -5,12 +5,18 @@ struct SettingsView: View {
     @AppStorage("remind7Days") private var remind7Days = true
     @AppStorage("remind3Days") private var remind3Days = true
     @AppStorage("remind1Day") private var remind1Day = true
+    @AppStorage("badgeCountEnabled") private var badgeCountEnabled = true
 
     var body: some View {
         NavigationStack {
             Form {
-                // MARK: - Notifications
-                Section("Notifications") {
+                // MARK: - Notification Access
+                Section("Notification Access") {
+                    NotificationPermissionView()
+                }
+
+                // MARK: - Reminder Intervals
+                Section("Reminder Intervals") {
                     Toggle("Enable Reminders", isOn: $notificationsEnabled)
 
                     if notificationsEnabled {
@@ -19,11 +25,7 @@ struct SettingsView: View {
                         Toggle("1 day before", isOn: $remind1Day)
                     }
 
-                    Button("Open System Settings") {
-                        if let url = URL(string: UIApplication.openSettingsURLString) {
-                            UIApplication.shared.open(url)
-                        }
-                    }
+                    Toggle("Badge count on app icon", isOn: $badgeCountEnabled)
                 }
 
                 // MARK: - Pro Tier
