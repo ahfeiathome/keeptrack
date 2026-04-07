@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="22757" systemVersion="23G93" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Item" representedClassName="Item" syncable="YES" codeGenerationType="class">
+        <attribute name="category" optional="YES" attributeType="String"/>
+        <attribute name="createdAt" optional="NO" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="id" optional="NO" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="isReturned" optional="NO" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="name" optional="NO" attributeType="String"/>
+        <attribute name="price" optional="NO" attributeType="Decimal" defaultValueString="0.0"/>
+        <attribute name="receiptId" optional="NO" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="returnDeadline" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="warrantyDeadline" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="warrantyMonths" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="receipt" optional="NO" maxCount="1" deletionRule="Nullify" destinationEntity="Receipt" inverseName="items" inverseEntity="Receipt"/>
+        <relationship name="reminders" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Reminder" inverseName="item" inverseEntity="Reminder"/>
+    </entity>
+    <entity name="Receipt" representedClassName="Receipt" syncable="YES" codeGenerationType="class">
+        <attribute name="archivedAt" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="createdAt" optional="NO" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="id" optional="NO" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="imageBlob" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES"/>
+        <attribute name="imagePath" optional="YES" attributeType="String"/>
+        <attribute name="notes" optional="YES" attributeType="String"/>
+        <attribute name="ocrText" optional="YES" attributeType="String"/>
+        <attribute name="purchaseDate" optional="NO" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="storeId" optional="NO" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="total" optional="NO" attributeType="Decimal" defaultValueString="0.0"/>
+        <relationship name="items" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Item" inverseName="receipt" inverseEntity="Item"/>
+        <relationship name="store" optional="NO" maxCount="1" deletionRule="Nullify" destinationEntity="Store" inverseName="receipts" inverseEntity="Store"/>
+    </entity>
+    <entity name="Reminder" representedClassName="Reminder" syncable="YES" codeGenerationType="class">
+        <attribute name="createdAt" optional="NO" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="id" optional="NO" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="itemId" optional="NO" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="notificationId" optional="YES" attributeType="String"/>
+        <attribute name="sent" optional="NO" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="triggerDate" optional="NO" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="type" optional="NO" attributeType="String"/>
+        <relationship name="item" optional="NO" maxCount="1" deletionRule="Nullify" destinationEntity="Item" inverseName="reminders" inverseEntity="Item"/>
+    </entity>
+    <entity name="Store" representedClassName="Store" syncable="YES" codeGenerationType="class">
+        <attribute name="createdAt" optional="NO" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="id" optional="NO" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="logoURL" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="NO" attributeType="String"/>
+        <attribute name="receiptRequired" optional="NO" attributeType="Boolean" defaultValueString="YES" usesScalarValueType="YES"/>
+        <attribute name="returnDays" optional="NO" attributeType="Integer 16" defaultValueString="30" usesScalarValueType="YES"/>
+        <attribute name="warrantyPolicy" optional="YES" attributeType="String"/>
+        <relationship name="receipts" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Receipt" inverseName="store" inverseEntity="Receipt"/>
+    </entity>
+    <elements>
+        <element name="Item" positionX="-54" positionY="-18" width="128" height="209"/>
+        <element name="Receipt" positionX="160" positionY="-18" width="128" height="194"/>
+        <element name="Reminder" positionX="-54" positionY="216" width="128" height="149"/>
+        <element name="Store" positionX="369" positionY="-18" width="128" height="164"/>
+    </elements>
+</model>
