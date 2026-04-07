@@ -1,0 +1,182 @@
+[
+  {
+    "id": "store-amazon",
+    "name": "Amazon",
+    "returnDays": 30,
+    "receiptRequired": false,
+    "exceptions": "Electronics: 30 days. Amazon Devices: 30 days. Amazon Fresh/Whole Foods: 7 days. Third-party marketplace sellers vary.",
+    "warrantyPolicy": "Varies by product and seller. Amazon-fulfilled items eligible for A-to-Z Guarantee.",
+    "logoURL": "https://logo.clearbit.com/amazon.com"
+  },
+  {
+    "id": "store-target",
+    "name": "Target",
+    "returnDays": 90,
+    "receiptRequired": false,
+    "exceptions": "Electronics and entertainment: 30 days. Apple products: 15 days. Target Circle Card holders get extra 30 days.",
+    "warrantyPolicy": "Manufacturer warranty applies. Target Protection Plans available for purchase.",
+    "logoURL": "https://logo.clearbit.com/target.com"
+  },
+  {
+    "id": "store-walmart",
+    "name": "Walmart",
+    "returnDays": 90,
+    "receiptRequired": false,
+    "exceptions": "Electronics: 30 days. Computers/tablets: 15 days. Phones: 14 days. Firearms: non-returnable.",
+    "warrantyPolicy": "Manufacturer warranty applies. Walmart Protection Plans available.",
+    "logoURL": "https://logo.clearbit.com/walmart.com"
+  },
+  {
+    "id": "store-costco",
+    "name": "Costco",
+    "returnDays": 365,
+    "receiptRequired": false,
+    "exceptions": "Electronics (TVs, computers, cameras, tablets, phones): 90 days. Cigarettes/alcohol: non-returnable. Diamonds >1 carat: requires inspection.",
+    "warrantyPolicy": "Costco Concierge Services provides 2-year warranty extension on electronics beyond manufacturer warranty.",
+    "logoURL": "https://logo.clearbit.com/costco.com"
+  },
+  {
+    "id": "store-bestbuy",
+    "name": "Best Buy",
+    "returnDays": 15,
+    "receiptRequired": true,
+    "exceptions": "My Best Buy Elite: 30 days. My Best Buy Elite Plus: 45 days. Cell phones/devices: 15 days. Non-members: 15 days.",
+    "warrantyPolicy": "Geek Squad Protection Plans available. Manufacturer warranty applies.",
+    "logoURL": "https://logo.clearbit.com/bestbuy.com"
+  },
+  {
+    "id": "store-apple",
+    "name": "Apple",
+    "returnDays": 14,
+    "receiptRequired": true,
+    "exceptions": "iPhone: 14 days. All products 14 days. Custom-configured Macs: 14 days. Apps/media: non-returnable.",
+    "warrantyPolicy": "1-year limited warranty standard. AppleCare+ extends to 2-3 years with accidental damage coverage.",
+    "logoURL": "https://logo.clearbit.com/apple.com"
+  },
+  {
+    "id": "store-home-depot",
+    "name": "The Home Depot",
+    "returnDays": 90,
+    "receiptRequired": false,
+    "exceptions": "Major appliances: 30 days. Generators/furniture/area rugs: 30 days. Perennials/trees/shrubs: 1 year.",
+    "warrantyPolicy": "Manufacturer warranty applies. Home Depot Protection Plans available for major appliances.",
+    "logoURL": "https://logo.clearbit.com/homedepot.com"
+  },
+  {
+    "id": "store-lowes",
+    "name": "Lowe's",
+    "returnDays": 90,
+    "receiptRequired": false,
+    "exceptions": "Major appliances: 30 days. Outdoor power equipment: 30 days. Paint: non-returnable if tinted.",
+    "warrantyPolicy": "Manufacturer warranty applies. Lowe's Protection Plans available.",
+    "logoURL": "https://logo.clearbit.com/lowes.com"
+  },
+  {
+    "id": "store-macys",
+    "name": "Macy's",
+    "returnDays": 90,
+    "receiptRequired": false,
+    "exceptions": "Furniture/mattresses: 3 days. Fine jewelry/watches: 30 days with original packaging. Last Act clearance: non-returnable.",
+    "warrantyPolicy": "Manufacturer warranty applies. Macy's does not offer extended warranties.",
+    "logoURL": "https://logo.clearbit.com/macys.com"
+  },
+  {
+    "id": "store-nordstrom",
+    "name": "Nordstrom",
+    "returnDays": 365,
+    "receiptRequired": false,
+    "exceptions": "No time limit for most items. Nordstrom Rack: 45 days. Worn/washed items assessed case by case.",
+    "warrantyPolicy": "Manufacturer warranty applies.",
+    "logoURL": "https://logo.clearbit.com/nordstrom.com"
+  },
+  {
+    "id": "store-kohls",
+    "name": "Kohl's",
+    "returnDays": 180,
+    "receiptRequired": false,
+    "exceptions": "Premium electronics/watches: 30 days. Without receipt: store credit at lowest selling price.",
+    "warrantyPolicy": "Manufacturer warranty applies.",
+    "logoURL": "https://logo.clearbit.com/kohls.com"
+  },
+  {
+    "id": "store-tj-maxx",
+    "name": "TJ Maxx",
+    "returnDays": 30,
+    "receiptRequired": true,
+    "exceptions": "In-store: 30 days. Online: 40 days from ship date. Swimwear/intimate apparel: tags must be attached.",
+    "warrantyPolicy": "Manufacturer warranty applies.",
+    "logoURL": "https://logo.clearbit.com/tjmaxx.com"
+  },
+  {
+    "id": "store-gap",
+    "name": "Gap",
+    "returnDays": 45,
+    "receiptRequired": false,
+    "exceptions": "Final sale items: non-returnable. Online orders: 45 days from ship date.",
+    "warrantyPolicy": "Gap does not offer product warranties.",
+    "logoURL": "https://logo.clearbit.com/gap.com"
+  },
+  {
+    "id": "store-zara",
+    "name": "Zara",
+    "returnDays": 30,
+    "receiptRequired": true,
+    "exceptions": "Items must be unworn with tags attached. Sale items: same 30-day window.",
+    "warrantyPolicy": "Zara does not offer product warranties.",
+    "logoURL": "https://logo.clearbit.com/zara.com"
+  },
+  {
+    "id": "store-old-navy",
+    "name": "Old Navy",
+    "returnDays": 45,
+    "receiptRequired": false,
+    "exceptions": "Final sale items: non-returnable. Online: 45 days from ship date.",
+    "warrantyPolicy": "Old Navy does not offer product warranties.",
+    "logoURL": "https://logo.clearbit.com/oldnavy.com"
+  },
+  {
+    "id": "store-sams-club",
+    "name": "Sam's Club",
+    "returnDays": 365,
+    "receiptRequired": false,
+    "exceptions": "Electronics/computers/televisions: 90 days. Cell phones: 14 days. Commercial machinery: 30 days.",
+    "warrantyPolicy": "Manufacturer warranty applies. Sam's Club Protection Plans available.",
+    "logoURL": "https://logo.clearbit.com/samsclub.com"
+  },
+  {
+    "id": "store-cvs",
+    "name": "CVS",
+    "returnDays": 60,
+    "receiptRequired": true,
+    "exceptions": "Prescription medications: non-returnable. Opened personal care items: non-returnable.",
+    "warrantyPolicy": "Manufacturer warranty applies on applicable products.",
+    "logoURL": "https://logo.clearbit.com/cvs.com"
+  },
+  {
+    "id": "store-walgreens",
+    "name": "Walgreens",
+    "returnDays": 30,
+    "receiptRequired": true,
+    "exceptions": "Prescription items: non-returnable. Opened health/beauty: non-returnable.",
+    "warrantyPolicy": "Manufacturer warranty applies on applicable products.",
+    "logoURL": "https://logo.clearbit.com/walgreens.com"
+  },
+  {
+    "id": "store-ikea",
+    "name": "IKEA",
+    "returnDays": 365,
+    "receiptRequired": true,
+    "exceptions": "Opened mattresses: non-returnable. Custom-cut fabric: non-returnable. Plants/food: non-returnable. As-Is items: 180 days.",
+    "warrantyPolicy": "IKEA offers 10-year warranty on most furniture. Specific products vary (2-25 years).",
+    "logoURL": "https://logo.clearbit.com/ikea.com"
+  },
+  {
+    "id": "store-bed-bath-beyond",
+    "name": "Overstock (fmr. Bed Bath & Beyond)",
+    "returnDays": 30,
+    "receiptRequired": false,
+    "exceptions": "Furniture/mattresses: 30 days. Marketplace items vary by seller.",
+    "warrantyPolicy": "Manufacturer warranty applies.",
+    "logoURL": "https://logo.clearbit.com/overstock.com"
+  }
+]
