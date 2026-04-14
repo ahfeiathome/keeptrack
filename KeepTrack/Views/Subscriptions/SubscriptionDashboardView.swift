@@ -17,6 +17,10 @@ struct SubscriptionDashboardView: View {
         SubscriptionService.calculateTotalBurn(from: Array(subscriptions))
     }
 
+    var categoryBreakdown: [(category: String, monthly: Decimal, count: Int)] {
+        SubscriptionService.burnByCategory(from: Array(subscriptions))
+    }
+
     var body: some View {
         NavigationStack {
             List {
@@ -46,6 +50,32 @@ struct SubscriptionDashboardView: View {
                     .padding(.vertical, 8)
                 } header: {
                     Text("Insights")
+                }
+
+                if !categoryBreakdown.isEmpty {
+                    Section {
+                        ForEach(categoryBreakdown, id: \.category) { item in
+                            HStack {
+                                Image(systemName: categoryIcon(for: item.category))
+                                    .foregroundStyle(.secondary)
+                                    .frame(width: 20)
+                                Text(item.category)
+                                    .font(.subheadline)
+                                Spacer()
+                                Text("\(item.count) sub\(item.count == 1 ? "" : "s")")
+                                    .font(.caption)
+                                    .foregroundStyle(.secondary)
+                                Text(item.monthly, format: .currency(code: "USD"))
+                                    .font(.subheadline.bold())
+                                    .foregroundStyle(.secondary)
+                                Text("/ mo")
+                                    .font(.caption)
+                                    .foregroundStyle(.tertiary)
+                            }
+                        }
+                    } header: {
+                        Text("By Category")
+                    }
                 }
 
                 Section {

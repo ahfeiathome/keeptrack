@@ -77,4 +77,20 @@ enum SubscriptionService {
         else if score > 40 { return "orange" }
         else { return "green" }
     }
+
+    /// Returns monthly burn grouped by category, sorted by highest spend first.
+    static func burnByCategory(from subscriptions: [Subscription]) -> [(category: String, monthly: Decimal, count: Int)] {
+        let activeSubs = subscriptions.filter { $0.status != "cancelled" }
+        var grouped: [String: (monthly: Decimal, count: Int)] = [:]
+        for sub in activeSubs {
+            let cat = sub.category ?? "Other"
+            let price = (sub.price as? Decimal) ?? 0
+            let monthly = normalizeToMonthly(price: price, cycle: sub.billingCycle)
+            let existing = grouped[cat] ?? (monthly: 0, count: 0)
+            grouped[cat] = (monthly: existing.monthly + monthly, count: existing.count + 1)
+        }
+        return grouped
+            .map { (category: $0.key, monthly: $0.value.monthly, count: $0.value.count) }
+            .sorted { $0.monthly > $1.monthly }
+    }
 }

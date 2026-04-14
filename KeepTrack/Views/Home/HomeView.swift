@@ -32,6 +32,10 @@ struct HomeView: View {
         return itemsSum + subsSum
     }
 
+    private var subscriptionBurnRate: BurnRate {
+        SubscriptionService.calculateTotalBurn(from: Array(subscriptions))
+    }
+
     var body: some View {
         NavigationStack {
             Group {
@@ -83,24 +87,37 @@ struct HomeView: View {
                         }
 
                         if !subscriptions.isEmpty {
-                            Section("Active Subscriptions") {
-                                ForEach(subscriptions) { sub in
-                                    NavigationLink {
-                                        CancelGuideView(subscriptionName: sub.name ?? "Subscription")
-                                    } label: {
-                                        HStack {
-                                            VStack(alignment: .leading, spacing: 4) {
-                                                Text(sub.name ?? "Subscription")
-                                                    .font(.headline)
-                                                Text(relativeDate(for: sub.renewalDate ?? Date()))
-                                                    .font(.caption)
-                                                    .foregroundStyle(.secondary)
-                                            }
-                                            Spacer()
-                                            Text((sub.price as? Decimal ?? 0), format: .currency(code: "USD"))
-                                                .font(.subheadline.bold())
-                                        }
+                            Section(header: Text("Subscriptions")) {
+                                HStack {
+                                    VStack(alignment: .leading, spacing: 2) {
+                                        Text("Monthly Burn")
+                                            .font(.caption)
+                                            .foregroundStyle(.secondary)
+                                            .textCase(.uppercase)
+                                        Text(subscriptionBurnRate.monthly, format: .currency(code: "USD"))
+                                            .font(.title3.bold())
                                     }
+                                    Spacer()
+                                }
+                                .padding(.vertical, 4)
+                                ForEach(Array(subscriptions.prefix(3)), id: \.id) { sub in
+                                    HStack {
+                                        VStack(alignment: .leading, spacing: 2) {
+                                            Text(sub.name ?? "Subscription")
+                                                .font(.subheadline)
+                                            Text(relativeDate(for: sub.renewalDate ?? Date()))
+                                                .font(.caption)
+                                                .foregroundStyle(.secondary)
+                                        }
+                                        Spacer()
+                                        Text((sub.price as? Decimal ?? 0), format: .currency(code: "USD"))
+                                            .font(.subheadline.bold())
+                                    }
+                                }
+                                if subscriptions.count > 3 {
+                                    Text("+ \(subscriptions.count - 3) more")
+                                        .font(.caption)
+                                        .foregroundStyle(.secondary)
                                 }
                             }
                         }
