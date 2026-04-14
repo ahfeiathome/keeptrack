@@ -19,7 +19,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 
     func applicationDidBecomeActive(_ application: UIApplication) {
         // Clear badge when user opens the app
-        UIApplication.shared.applicationIconBadgeNumber = 0
+        UNUserNotificationCenter.current().setBadgeCount(0)
         // Refresh permission status in case user changed it in Settings
         Task { @MainActor in
             await NotificationService.shared.refreshAuthorizationStatus()
@@ -48,9 +48,15 @@ struct KeepTrackApp: App {
     /// Handles cases where items were added/deleted while the app was closed.
     private func rescheduleAllReminders() {
         let context = persistenceController.container.viewContext
-        let request = Item.fetchRequest()
-        request.predicate = NSPredicate(format: "isReturned == NO")
-        let items = (try? context.fetch(request)) ?? []
-        ReminderScheduler.rescheduleAll(items: items)
+        
+        let itemRequest = Item.fetchRequest()
+        itemRequest.predicate = NSPredicate(format: "isReturned == NO")
+        let items = (try? context.fetch(itemRequest)) ?? []
+        
+        let subRequest = Subscription.fetchRequest()
+        subRequest.predicate = NSPredicate(format: "status != 'cancelled'")
+        let subs = (try? context.fetch(subRequest)) ?? []
+        
+        ReminderScheduler.rescheduleAll(items: items, subscriptions: subs)
     }
 }

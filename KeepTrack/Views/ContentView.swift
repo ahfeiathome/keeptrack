@@ -24,6 +24,11 @@ struct ContentView: View {
                 }
                 .badge(badgeCount > 0 ? badgeCount : 0)
 
+            SubscriptionDashboardView()
+                .tabItem {
+                    Label("Subs", systemImage: "calendar.badge.clock")
+                }
+
             ArchiveView()
                 .tabItem {
                     Label("Archive", systemImage: "archivebox.fill")
@@ -37,7 +42,9 @@ struct ContentView: View {
     }
 }
 
+#if DEBUG
 #Preview {
     ContentView()
         .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
 }
+#endif

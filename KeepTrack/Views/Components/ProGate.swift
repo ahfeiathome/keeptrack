@@ -53,8 +53,8 @@ struct ProUpgradePrompt: View {
                         if store.purchaseState == .purchasing {
                             ProgressView().controlSize(.small).padding(.trailing, 4)
                         }
-                        Text(store.proProduct.map { "Upgrade — \($0.displayPrice)/mo" }
-                             ?? "Upgrade — $2.99/mo")
+                        Text(store.proProduct.map { "Upgrade — \($0.displayPrice)" }
+                             ?? "Upgrade — $2.99")
                             .bold()
                     }
                     .frame(maxWidth: .infinity)

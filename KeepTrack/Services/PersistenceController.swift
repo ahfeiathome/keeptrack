@@ -4,12 +4,14 @@ struct PersistenceController {
     static let shared = PersistenceController()
 
     // MARK: - Preview container for SwiftUI Previews
+    #if DEBUG
     static let preview: PersistenceController = {
         let controller = PersistenceController(inMemory: true)
         let viewContext = controller.container.viewContext
         PreviewData.populate(context: viewContext)
         return controller
     }()
+    #endif
 
     // MARK: - Container
     let container: NSPersistentCloudKitContainer

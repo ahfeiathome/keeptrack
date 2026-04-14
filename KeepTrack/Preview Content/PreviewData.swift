@@ -145,6 +145,37 @@ enum PreviewData {
         monitor.createdAt = now
         monitor.receipt = receipt5
 
+        // MARK: - Subscriptions
+        let netflix = Subscription(context: context)
+        netflix.id = UUID()
+        netflix.name = "Netflix"
+        netflix.price = 19.99
+        netflix.billingCycle = 0 // Monthly
+        netflix.category = "Entertainment"
+        netflix.status = "active"
+        netflix.renewalDate = calendar.date(byAdding: .day, value: 15, to: now)
+        netflix.createdAt = now
+
+        let icloud = Subscription(context: context)
+        icloud.id = UUID()
+        icloud.name = "iCloud+"
+        icloud.price = 9.99
+        icloud.billingCycle = 0 // Monthly
+        icloud.category = "Productivity"
+        icloud.status = "active"
+        icloud.renewalDate = calendar.date(byAdding: .day, value: 5, to: now)
+        icloud.createdAt = now
+
+        let amazonPrime = Subscription(context: context)
+        amazonPrime.id = UUID()
+        amazonPrime.name = "Amazon Prime"
+        amazonPrime.price = 139.00
+        amazonPrime.billingCycle = 1 // Annual
+        amazonPrime.category = "Shopping"
+        amazonPrime.status = "active"
+        amazonPrime.renewalDate = calendar.date(byAdding: .month, value: 6, to: now)
+        amazonPrime.createdAt = now
+
         try? context.save()
 
         return [macbook, headphones, jacket, toy, monitor]

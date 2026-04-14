@@ -51,7 +51,9 @@ struct ArchiveView: View {
     }
 }
 
+#if DEBUG
 #Preview {
     ArchiveView()
         .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
 }
+#endif

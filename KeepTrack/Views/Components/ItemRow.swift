@@ -64,6 +64,7 @@ struct ItemRow: View {
     }
 }
 
+#if DEBUG
 #Preview {
     List {
         ItemRow(item: PreviewData.sampleItems[0])
@@ -72,3 +73,4 @@ struct ItemRow: View {
     }
     .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
 }
+#endif
