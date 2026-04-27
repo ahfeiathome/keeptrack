@@ -18,6 +18,7 @@ private struct ItemForm {
     var retailer: String = ""
     var purchaseDate: Date = Date()
     var returnDeadline: Date = Calendar.current.date(byAdding: .day, value: 30, to: Date()) ?? Date()
+    var warrantyDeadline: Date = Calendar.current.date(byAdding: .year, value: 1, to: Date()) ?? Date()
     var price: String = ""
     var total: String = ""
 }
@@ -159,6 +160,7 @@ struct CaptureSheet: View {
                 TextField("Retailer", text: $form.retailer)
                 DatePicker("Purchase date", selection: $form.purchaseDate, displayedComponents: .date)
                 DatePicker("Return deadline", selection: $form.returnDeadline, displayedComponents: .date)
+                DatePicker("Warranty ends", selection: $form.warrantyDeadline, displayedComponents: .date)
             }
 
             Section {
@@ -194,6 +196,7 @@ struct CaptureSheet: View {
                 TextField("Retailer", text: $form.retailer)
                 DatePicker("Purchase date", selection: $form.purchaseDate, displayedComponents: .date)
                 DatePicker("Return deadline", selection: $form.returnDeadline, displayedComponents: .date)
+                DatePicker("Warranty ends", selection: $form.warrantyDeadline, displayedComponents: .date)
             }
 
             Section {
@@ -288,6 +291,7 @@ struct CaptureSheet: View {
         item.receiptId = receipt.id!
         item.receipt = receipt
         item.returnDeadline = form.returnDeadline
+        item.warrantyDeadline = form.warrantyDeadline
         item.isReturned = false
         item.createdAt = Date()
 
@@ -307,6 +311,7 @@ struct CaptureSheet: View {
 }
 
 // MARK: - Preview
+#if DEBUG
 #Preview {
     CaptureSheet()
         .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
@@ -327,3 +332,4 @@ struct CaptureSheet: View {
             // Preview starts in review mode; use this to test the review UI
         }
 }
+#endif

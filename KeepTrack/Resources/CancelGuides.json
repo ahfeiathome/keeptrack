@@ -1,0 +1,455 @@
+{
+  "Netflix": {
+    "steps": [
+      "Open Netflix website in browser",
+      "Login to your account",
+      "Go to 'Account' page",
+      "Select 'Cancel Membership' and follow prompts"
+    ],
+    "url": "https://www.netflix.com/CancelPlan"
+  },
+  "Apple": {
+    "steps": [
+      "Open 'Settings' on your iPhone",
+      "Tap your name at the top",
+      "Select 'Subscriptions'",
+      "Choose the service to cancel"
+    ],
+    "url": "https://apps.apple.com/account/subscriptions"
+  },
+  "Spotify": {
+    "steps": [
+      "Login to your Spotify account page",
+      "Under 'Your plan', click 'CHANGE PLAN'",
+      "Scroll down to 'Spotify Free' and click 'CANCEL PREMIUM'"
+    ],
+    "url": "https://www.spotify.com/account/overview/"
+  },
+  "Amazon Prime": {
+    "steps": [
+      "Go to 'Your Prime Membership'",
+      "Look for 'Manage Membership' on the top right",
+      "Click on 'End Membership' and confirm"
+    ],
+    "url": "https://www.amazon.com/gp/primecentral"
+  },
+  "Disney+": {
+    "steps": [
+      "Go to DisneyPlus.com and log in",
+      "Select your Profile",
+      "Select Account",
+      "Select your Subscription",
+      "Select Cancel Subscription"
+    ],
+    "url": "https://www.disneyplus.com/account"
+  },
+  "Hulu": {
+    "steps": [
+      "Log in to your Account page",
+      "Under your Subscription, select Cancel",
+      "Follow the remaining on-screen instructions"
+    ],
+    "url": "https://secure.hulu.com/account"
+  },
+  "YouTube Premium": {
+    "steps": [
+      "Tap your profile picture",
+      "Tap Paid memberships",
+      "Tap on the membership you want to cancel",
+      "Tap Deactivate"
+    ],
+    "url": "https://www.youtube.com/paid_memberships"
+  },
+  "Microsoft 365": {
+    "steps": [
+      "Go to the Services & subscriptions page",
+      "Find your subscription and select Manage",
+      "Select Cancel subscription"
+    ],
+    "url": "https://account.microsoft.com/services/"
+  },
+  "HBO Max": {
+    "steps": [
+      "Open Max and tap your profile icon",
+      "Select 'Subscription'",
+      "Select 'Manage Subscription'",
+      "Select 'Cancel Subscription' and confirm"
+    ],
+    "url": "https://www.max.com/account"
+  },
+  "Adobe Creative Cloud": {
+    "steps": [
+      "Sign in to the Adobe accounts page",
+      "Under your plan, click Manage plan",
+      "Select Cancel your plan"
+    ],
+    "url": "https://account.adobe.com/plans"
+  },
+  "Peacock": {
+    "steps": [
+      "Sign in to your Peacock account",
+      "Click your Profile icon",
+      "Select 'Account'",
+      "Under 'Subscription', select 'Manage'",
+      "Click 'Cancel Subscription'"
+    ],
+    "url": "https://www.peacocktv.com/account"
+  },
+  "Paramount+": {
+    "steps": [
+      "Sign in to your Paramount+ account",
+      "Click your profile icon",
+      "Select 'Account & Settings'",
+      "Scroll to 'Subscription' and click 'Cancel Subscription'"
+    ],
+    "url": "https://www.paramountplus.com/account/subscription/"
+  },
+  "Apple TV+": {
+    "steps": [
+      "Open 'Settings' on your iPhone",
+      "Tap your name at the top",
+      "Select 'Subscriptions'",
+      "Tap 'Apple TV+'",
+      "Tap 'Cancel Subscription'"
+    ],
+    "url": "https://apps.apple.com/account/subscriptions"
+  },
+  "ESPN+": {
+    "steps": [
+      "Sign in to your ESPN account",
+      "Go to 'My Account'",
+      "Select 'ESPN+ Subscription'",
+      "Click 'Cancel ESPN+'"
+    ],
+    "url": "https://plus.espn.com/account/manage"
+  },
+  "Starz": {
+    "steps": [
+      "Sign in to your Starz account",
+      "Go to your Account page",
+      "Under 'Subscription', select 'Cancel Subscription'",
+      "Follow the on-screen steps to confirm"
+    ],
+    "url": "https://www.starz.com/account"
+  },
+  "Showtime": {
+    "steps": [
+      "Sign in to your Paramount+ account (Showtime is now bundled)",
+      "Go to 'Account & Settings'",
+      "Select 'Manage Subscription'",
+      "Choose to remove Showtime from your plan"
+    ],
+    "url": "https://www.paramountplus.com/account/subscription/"
+  },
+  "Dropbox": {
+    "steps": [
+      "Log in to Dropbox.com",
+      "Click your avatar in the top right",
+      "Select 'Settings' then 'Plan'",
+      "Click 'Cancel plan'"
+    ],
+    "url": "https://www.dropbox.com/account/plan"
+  },
+  "Evernote": {
+    "steps": [
+      "Log in to your Evernote account",
+      "Go to Account Summary",
+      "Click 'Manage Subscription'",
+      "Select 'Cancel Subscription'"
+    ],
+    "url": "https://www.evernote.com/client/web#?an=true&n=home&s=home"
+  },
+  "Zoom": {
+    "steps": [
+      "Log in to your Zoom account at zoom.us",
+      "Go to 'Account Management' → 'Billing'",
+      "Under your current plan, click 'Cancel Subscription'",
+      "Select your reason and confirm"
+    ],
+    "url": "https://zoom.us/account/billing"
+  },
+  "Slack": {
+    "steps": [
+      "Go to your Slack workspace settings",
+      "Select 'Billing'",
+      "Scroll to 'Downgrade to Free'",
+      "Confirm the downgrade"
+    ],
+    "url": "https://slack.com/account/settings"
+  },
+  "NordVPN": {
+    "steps": [
+      "Log in to your Nord Account",
+      "Go to 'Billing'",
+      "Click 'Cancel subscription'",
+      "Confirm cancellation"
+    ],
+    "url": "https://my.nordaccount.com/billing/"
+  },
+  "ExpressVPN": {
+    "steps": [
+      "Log in to your ExpressVPN account at expressvpn.com",
+      "Go to 'Subscription'",
+      "Click 'Turn off auto-renew'",
+      "Confirm to cancel"
+    ],
+    "url": "https://www.expressvpn.com/subscriptions"
+  },
+  "LastPass": {
+    "steps": [
+      "Log in to LastPass at lastpass.com",
+      "Click your avatar then 'Account Settings'",
+      "Select 'Cancel Premium'",
+      "Follow the steps to downgrade"
+    ],
+    "url": "https://lastpass.com/account.php"
+  },
+  "Peloton": {
+    "steps": [
+      "Log in at onepeloton.com",
+      "Go to 'Membership'",
+      "Click 'Cancel Membership'",
+      "Follow the steps and confirm"
+    ],
+    "url": "https://www.onepeloton.com/profile/subscriptions"
+  },
+  "Headspace": {
+    "steps": [
+      "Log in to your Headspace account",
+      "Go to 'Account' → 'Subscription'",
+      "Select 'Cancel Subscription'",
+      "Confirm cancellation"
+    ],
+    "url": "https://www.headspace.com/account"
+  },
+  "Calm": {
+    "steps": [
+      "Open the Calm app",
+      "Tap the Profile icon",
+      "Tap 'Account Details'",
+      "Select 'Manage Subscription'",
+      "Choose 'Cancel Subscription'"
+    ],
+    "url": "https://www.calm.com/account"
+  },
+  "MyFitnessPal": {
+    "steps": [
+      "Log in to MyFitnessPal",
+      "Go to 'Settings' → 'Subscriptions'",
+      "Select 'Cancel Premium'",
+      "Follow the on-screen instructions"
+    ],
+    "url": "https://www.myfitnesspal.com/account/subscription"
+  },
+  "Strava": {
+    "steps": [
+      "Log in to Strava at strava.com",
+      "Click your profile picture",
+      "Go to 'Settings' → 'Subscription'",
+      "Click 'Cancel Subscription'"
+    ],
+    "url": "https://www.strava.com/account"
+  },
+  "DoorDash DashPass": {
+    "steps": [
+      "Open the DoorDash app",
+      "Tap the Account icon",
+      "Select 'Manage DashPass'",
+      "Tap 'End Subscription' and confirm"
+    ],
+    "url": "https://www.doordash.com/dashpass/"
+  },
+  "Instacart+": {
+    "steps": [
+      "Log in to your Instacart account",
+      "Go to 'Account' → 'Instacart+'",
+      "Select 'Cancel membership'",
+      "Confirm cancellation"
+    ],
+    "url": "https://www.instacart.com/store/account/instacart_plus"
+  },
+  "Walmart+": {
+    "steps": [
+      "Log in to your Walmart account",
+      "Go to 'Account' → 'Walmart+'",
+      "Select 'Manage Membership'",
+      "Click 'Cancel membership' and confirm"
+    ],
+    "url": "https://www.walmart.com/account/plus"
+  },
+  "Xbox Game Pass": {
+    "steps": [
+      "Sign in at account.microsoft.com",
+      "Go to 'Services & subscriptions'",
+      "Find Game Pass and click 'Manage'",
+      "Select 'Cancel subscription'"
+    ],
+    "url": "https://account.microsoft.com/services/"
+  },
+  "PlayStation Plus": {
+    "steps": [
+      "Sign in to your PlayStation account",
+      "Go to Subscriptions",
+      "Select PS Plus",
+      "Choose 'Turn Off Auto-Renew'"
+    ],
+    "url": "https://www.playstation.com/acct/management"
+  },
+  "Apple Arcade": {
+    "steps": [
+      "Open 'Settings' on your iPhone",
+      "Tap your name at the top",
+      "Select 'Subscriptions'",
+      "Tap 'Apple Arcade'",
+      "Tap 'Cancel Subscription'"
+    ],
+    "url": "https://apps.apple.com/account/subscriptions"
+  },
+  "Nintendo Switch Online": {
+    "steps": [
+      "Visit the Nintendo website and sign in",
+      "Go to 'Nintendo Switch Online'",
+      "Select 'Automatic Renewal Settings'",
+      "Turn off auto-renewal"
+    ],
+    "url": "https://accounts.nintendo.com/"
+  },
+  "EA Play": {
+    "steps": [
+      "Sign in at ea.com",
+      "Go to 'Account' → 'EA Play'",
+      "Click 'Manage Subscription'",
+      "Select 'Cancel Plan' and confirm"
+    ],
+    "url": "https://www.ea.com/ea-play"
+  },
+  "HelloFresh": {
+    "steps": [
+      "Log in at hellofresh.com",
+      "Go to 'Account Settings'",
+      "Select 'Plan Settings'",
+      "Click 'Cancel Plan' and follow the prompts"
+    ],
+    "url": "https://www.hellofresh.com/my-account/plan-settings"
+  },
+  "Noom": {
+    "steps": [
+      "Open the Noom app",
+      "Tap your profile icon",
+      "Go to 'Settings' → 'Subscription'",
+      "Select 'Cancel Subscription' and confirm"
+    ],
+    "url": "https://web.noom.com/my-account"
+  },
+  "New York Times": {
+    "steps": [
+      "Go to nytimes.com and sign in",
+      "Click your name → 'Manage Account'",
+      "Select 'Cancel Subscription'",
+      "Follow the on-screen steps"
+    ],
+    "url": "https://myaccount.nytimes.com/seg/subscription/cancel"
+  },
+  "Wall Street Journal": {
+    "steps": [
+      "Sign in at wsj.com",
+      "Go to 'Customer Center'",
+      "Select 'Manage Subscription'",
+      "Click 'Cancel Subscription'"
+    ],
+    "url": "https://customercenter.wsj.com/"
+  },
+  "Washington Post": {
+    "steps": [
+      "Sign in at washingtonpost.com",
+      "Go to 'Subscription' → 'Manage'",
+      "Select 'Cancel Subscription'",
+      "Confirm cancellation"
+    ],
+    "url": "https://subscribe.washingtonpost.com/memberlink/manageaccount.html"
+  },
+  "The Athletic": {
+    "steps": [
+      "Log in to The Athletic at theathletic.com",
+      "Go to your Account page",
+      "Select 'Manage Subscription'",
+      "Click 'Cancel Subscription' and confirm"
+    ],
+    "url": "https://theathletic.com/account/subscription/"
+  },
+  "Apple Music": {
+    "steps": [
+      "Open 'Settings' on your iPhone",
+      "Tap your name at the top",
+      "Select 'Subscriptions'",
+      "Tap 'Apple Music'",
+      "Tap 'Cancel Subscription'"
+    ],
+    "url": "https://apps.apple.com/account/subscriptions"
+  },
+  "Pandora": {
+    "steps": [
+      "Log in at pandora.com",
+      "Go to 'Account' → 'Subscription'",
+      "Select 'Manage Subscription'",
+      "Click 'Cancel Subscription'"
+    ],
+    "url": "https://www.pandora.com/account/billing"
+  },
+  "iCloud+": {
+    "steps": [
+      "Open 'Settings' on your iPhone",
+      "Tap your name → 'iCloud'",
+      "Tap 'Manage Account Storage'",
+      "Select 'Change Storage Plan'",
+      "Choose 'Downgrade Options' to cancel"
+    ],
+    "url": "https://apps.apple.com/account/subscriptions"
+  },
+  "Google One": {
+    "steps": [
+      "Open the Google One app or go to one.google.com",
+      "Tap 'Manage' then 'Manage subscription'",
+      "Select 'Cancel subscription'",
+      "Follow the remaining steps to confirm"
+    ],
+    "url": "https://one.google.com/"
+  },
+  "LinkedIn Premium": {
+    "steps": [
+      "Sign in to LinkedIn",
+      "Click your profile picture → 'Premium' → 'Manage Premium account'",
+      "Click 'Cancel subscription'",
+      "Confirm cancellation"
+    ],
+    "url": "https://www.linkedin.com/premium/account-settings/"
+  },
+  "Duolingo Plus": {
+    "steps": [
+      "Open 'Settings' on your iPhone",
+      "Tap your name at the top",
+      "Select 'Subscriptions'",
+      "Tap 'Duolingo'",
+      "Tap 'Cancel Subscription'"
+    ],
+    "url": "https://apps.apple.com/account/subscriptions"
+  },
+  "Grammarly": {
+    "steps": [
+      "Log in to your Grammarly account",
+      "Go to 'Account' → 'Subscription'",
+      "Click 'Cancel Subscription'",
+      "Follow the steps to confirm"
+    ],
+    "url": "https://account.grammarly.com/billing/cancellation"
+  },
+  "Notion": {
+    "steps": [
+      "Log in to notion.so",
+      "Go to 'Settings & Members'",
+      "Select 'Plans'",
+      "Click 'Downgrade to Free' and confirm"
+    ],
+    "url": "https://www.notion.so/my-account"
+  }
+}
