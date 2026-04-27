@@ -70,7 +70,7 @@ struct AddSubscriptionView: View {
                 Section("Renewal") {
                     DatePicker("Next Renewal", selection: $renewalDate, displayedComponents: .date)
                     
-                    Toggle("Has Free Trial", isOn: $hasTrial)
+                    Toggle("Has Free Trial", isOn: $hasTrial.animation())
                     if hasTrial {
                         DatePicker("Trial Ends", selection: $trialEndDate, displayedComponents: .date)
                     }
