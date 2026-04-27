@@ -34,6 +34,11 @@ struct ContentView: View {
                     Label("Archive", systemImage: "archivebox.fill")
                 }
 
+            SavingsDashboardView()
+                .tabItem {
+                    Label("Savings", systemImage: "leaf.fill")
+                }
+
             SettingsView()
                 .tabItem {
                     Label("Settings", systemImage: "gearshape.fill")

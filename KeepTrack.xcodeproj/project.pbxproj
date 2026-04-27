@@ -10,6 +10,10 @@
 		CB9161610F454DAD9E326C34 /* KeepTrackApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53476CBEB05F4FDAB9546367 /* KeepTrackApp.swift */; };
 		31B33803E1DB4782BE2A0DE9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DF7255365148E0BADF79C3 /* ContentView.swift */; };
 		EFF9C18FC91B40FFA4B5E475 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755162FF1A3143B08657FD3F /* HomeView.swift */; };
+		A1B2C3D4E5F6A7B8C9D0E1F2 /* SavingsDashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B2C3D4E5F6A7B8C9D0E1F3 /* SavingsDashboardView.swift */; };
+		T1B2C3D4E5F6A7B8C9D0E001 /* BurnRateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = T1B2C3D4E5F6A7B8C9D0E002 /* BurnRateTests.swift */; };
+		T1B2C3D4E5F6A7B8C9D0E003 /* WasteScoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = T1B2C3D4E5F6A7B8C9D0E004 /* WasteScoreTests.swift */; };
+		T1B2C3D4E5F6A7B8C9D0E005 /* KeepTrack.app in Frameworks */ = {isa = PBXBuildFile; fileRef = A73E438C876D419EAD477BA6 /* KeepTrack.app */; };
 		ED2339F6C0E64C70858A921F /* ArchiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7EA006A74F4F0A9DC28F5C /* ArchiveView.swift */; };
 		33F52ECE355C4CC19280D5C2 /* SubscriptionDashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17C31632A60470A896F022E /* SubscriptionDashboardView.swift */; };
 		EF388CB3A135431B8BF4CC86 /* AddSubscriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FC6EF001324C62B038588E /* AddSubscriptionView.swift */; };
@@ -37,6 +41,10 @@
 		53476CBEB05F4FDAB9546367 /* KeepTrackApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeepTrackApp.swift; sourceTree = "<group>"; };
 		B2DF7255365148E0BADF79C3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		755162FF1A3143B08657FD3F /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		A1B2C3D4E5F6A7B8C9D0E1F3 /* SavingsDashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavingsDashboardView.swift; sourceTree = "<group>"; };
+		T1B2C3D4E5F6A7B8C9D0E002 /* BurnRateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BurnRateTests.swift; sourceTree = "<group>"; };
+		T1B2C3D4E5F6A7B8C9D0E004 /* WasteScoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WasteScoreTests.swift; sourceTree = "<group>"; };
+		T1B2C3D4E5F6A7B8C9D0E006 /* KeepTrackTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KeepTrackTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB7EA006A74F4F0A9DC28F5C /* ArchiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveView.swift; sourceTree = "<group>"; };
 		C17C31632A60470A896F022E /* SubscriptionDashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionDashboardView.swift; sourceTree = "<group>"; };
 		B2FC6EF001324C62B038588E /* AddSubscriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSubscriptionView.swift; sourceTree = "<group>"; };
@@ -68,6 +76,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		T1B2C3D4E5F6A7B8C9D0E010 /* Frameworks (Tests) */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -75,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				2130D20A4CE942A7A7FA76A8 /* KeepTrack */,
+				T1B2C3D4E5F6A7B8C9D0E020 /* KeepTrackTests */,
 				64F9F0381EEC4DC09AA3739A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -83,8 +99,18 @@
 			isa = PBXGroup;
 			children = (
 				A73E438C876D419EAD477BA6 /* KeepTrack.app */,
+				T1B2C3D4E5F6A7B8C9D0E006 /* KeepTrackTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		T1B2C3D4E5F6A7B8C9D0E020 /* KeepTrackTests */ = {
+			isa = PBXGroup;
+			children = (
+				T1B2C3D4E5F6A7B8C9D0E002 /* BurnRateTests.swift */,
+				T1B2C3D4E5F6A7B8C9D0E004 /* WasteScoreTests.swift */,
+			);
+			path = KeepTrackTests;
 			sourceTree = "<group>";
 		};
 		2130D20A4CE942A7A7FA76A8 /* KeepTrack */ = {
@@ -167,6 +193,7 @@
 			isa = PBXGroup;
 			children = (
 				755162FF1A3143B08657FD3F /* HomeView.swift */,
+				A1B2C3D4E5F6A7B8C9D0E1F3 /* SavingsDashboardView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -225,8 +252,41 @@
 			productReference = A73E438C876D419EAD477BA6 /* KeepTrack.app */;
 			productType = "com.apple.product-type.application";
 		};
+		T1B2C3D4E5F6A7B8C9D0E030 /* KeepTrackTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = T1B2C3D4E5F6A7B8C9D0E050 /* Build configuration list for PBXNativeTarget "KeepTrackTests" */;
+			buildPhases = (
+				T1B2C3D4E5F6A7B8C9D0E040 /* Sources */,
+				T1B2C3D4E5F6A7B8C9D0E010 /* Frameworks (Tests) */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				T1B2C3D4E5F6A7B8C9D0E060 /* PBXTargetDependency */,
+			);
+			name = KeepTrackTests;
+			productName = KeepTrackTests;
+			productReference = T1B2C3D4E5F6A7B8C9D0E006 /* KeepTrackTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
+/* Begin PBXContainerItemProxy section */
+		T1B2C3D4E5F6A7B8C9D0E070 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FBD572AD19E3478592CEE7F2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 33E9620F102F4621ABA5056D;
+			remoteInfo = KeepTrack;
+		};
+/* End PBXContainerItemProxy section */
+/* Begin PBXTargetDependency section */
+		T1B2C3D4E5F6A7B8C9D0E060 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 33E9620F102F4621ABA5056D /* KeepTrack */;
+			targetProxy = T1B2C3D4E5F6A7B8C9D0E070 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 /* Begin PBXProject section */
 		FBD572AD19E3478592CEE7F2 /* Project object */ = {
 			isa = PBXProject;
@@ -237,6 +297,10 @@
 				TargetAttributes = {
 					33E9620F102F4621ABA5056D = {
 						CreatedOnToolsVersion = 16.0;
+					};
+					T1B2C3D4E5F6A7B8C9D0E030 = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = 33E9620F102F4621ABA5056D;
 					};
 				};
 			};
@@ -254,6 +318,7 @@
 			projectRoot = "";
 			targets = (
 				33E9620F102F4621ABA5056D /* KeepTrack */,
+				T1B2C3D4E5F6A7B8C9D0E030 /* KeepTrackTests */,
 			);
 		};
 /* End PBXProject section */
@@ -272,6 +337,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		T1B2C3D4E5F6A7B8C9D0E040 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				T1B2C3D4E5F6A7B8C9D0E001 /* BurnRateTests.swift in Sources */,
+				T1B2C3D4E5F6A7B8C9D0E003 /* WasteScoreTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C9527375AB864F5081385420 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -279,6 +353,7 @@
 				CB9161610F454DAD9E326C34 /* KeepTrackApp.swift in Sources */,
 				31B33803E1DB4782BE2A0DE9 /* ContentView.swift in Sources */,
 				EFF9C18FC91B40FFA4B5E475 /* HomeView.swift in Sources */,
+				A1B2C3D4E5F6A7B8C9D0E1F2 /* SavingsDashboardView.swift in Sources */,
 				ED2339F6C0E64C70858A921F /* ArchiveView.swift in Sources */,
 				33F52ECE355C4CC19280D5C2 /* SubscriptionDashboardView.swift in Sources */,
 				EF388CB3A135431B8BF4CC86 /* AddSubscriptionView.swift in Sources */,
@@ -418,6 +493,42 @@
 			};
 			name = Release;
 		};
+		T1B2C3D4E5F6A7B8C9D0E080 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ai.bigclaw.keeptrack.tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KeepTrack.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/KeepTrack";
+			};
+			name = Debug;
+		};
+		T1B2C3D4E5F6A7B8C9D0E090 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ai.bigclaw.keeptrack.tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KeepTrack.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/KeepTrack";
+			};
+			name = Release;
+		};
 		1E83ACDB5B0F4C25AD96FA57 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -495,6 +606,15 @@
 			buildConfigurations = (
 				1E83ACDB5B0F4C25AD96FA57 /* Debug */,
 				1F17B15C38DD4DD49096C1BF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		T1B2C3D4E5F6A7B8C9D0E050 /* Build configuration list for PBXNativeTarget "KeepTrackTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				T1B2C3D4E5F6A7B8C9D0E080 /* Debug */,
+				T1B2C3D4E5F6A7B8C9D0E090 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
